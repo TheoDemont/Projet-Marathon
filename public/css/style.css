@@ -1,0 +1,611 @@
+/*--------------
+------CORE------
+--------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Open+Sans:wght@300;400;800&display=swap');
+
+body{
+	margin: 0 auto;
+	background-color: rgba(66, 77, 99, 1);
+	color: white;
+
+	padding-top: 50px;
+}
+
+select:hover{
+	cursor: pointer;
+}
+
+h1, h2{
+	font-family: Dela Gothic One, cursive;
+}
+
+h3, h4{
+	font-family: Open Sans Extra Bold, sans-serif;
+}
+
+h5{
+	font-family: Open Sans Regular, sans-serif;
+}
+
+a{
+	font-family: Open Sans Light, sans-serif;
+}
+
+p{
+	font-family: Open Sans Light, sans-serif;
+}
+
+label{
+	font-family: Open Sans Light, sans-serif;
+}
+
+input{
+	font-family: Open Sans Light, sans-serif;
+}
+
+
+/*--------------
+------ANIM------
+--------------*/
+
+
+@keyframes pageAppUp{
+	0% {
+		margin-top: -100px;
+		opacity: 0;
+	}
+	100%{
+		margin-top: 0px;
+		opacity: 1;
+	}
+}
+
+@keyframes pageAppLeft{
+	0% {
+		opacity: 0;
+
+		margin-left: -200px;
+	}
+	100%{
+		opacity: 1;
+
+		margin-left: 0px;
+	}
+}
+
+
+@keyframes leftToRight{
+	0%{
+		opacity: 0;
+
+		margin-left: -170px;
+	}
+	100%{
+		opacity: 1;
+
+		margin-left: 0;
+	}
+}
+
+.aperçu5:hover .infos_série{
+	display: block;
+}
+
+
+/*-------------
+------POS------
+-------------*/
+
+
+.text-cent{
+	text-align: center;
+}
+
+.tab-top{
+	margin-top: 2.3%;
+}
+
+	.tab-top-sup{
+		margin-top: 3%;
+	}
+
+.tab-right{
+	margin-right: 23%;
+}
+
+.tab-bottom{
+	margin-bottom: 3%;
+}
+
+.tab-left{
+	margin-left: 3%;
+}
+
+	.tab-left-sup{
+		margin-left: 14%;
+	}
+
+.text-justify{
+	text-align: justify;
+}
+
+/*--------------
+------REUT------
+--------------*/
+
+
+.lien{
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+
+	padding: 5px 6px 3.5px 6px;
+	margin-right: 40px;
+
+	transition: all .5s ease-out;
+}
+
+	.lien:hover{
+		background-color: rgba(255, 255, 255, 1);
+		color: rgba(0, 0, 0, 1);
+	}
+
+.séparation{
+	background-color: rgba(218, 93, 55, 1);
+	border: none;
+	width: 70%;
+	height: 2px;
+
+	margin-bottom: 3%;
+}
+
+	.titre_rubrique{
+		color: white;
+		font-size: 30px;
+
+		margin-top: 2%;
+		margin-left: 3%;
+		margin-bottom: 2%;
+	}
+
+		.align_ap{
+			display: flex;
+			overflow: hidden;
+			column-count: 5;
+
+			margin-left: 10%;
+		}
+
+			.aperçu5{
+				display: flex;
+				height: 300px;
+
+				margin-right: 25px;
+				margin-bottom: 5%;
+			}
+
+				.taille_ap{
+					height: 300px;
+					width: 200px;
+					z-index: 1;
+				}
+
+					.infos_série{
+						display: none;
+						position: relative;
+						color: white;
+						width: 200px;
+						z-index: 0;
+
+						padding-left: 3%;
+
+						animation: 1s ease-out 0s 1 leftToRight;
+					}
+
+						.nom_série{
+							color: white;
+							font-size: 24px;
+
+							margin-top: 0;
+						}
+
+						.détails{
+							color: white;
+							font-size: 18px;
+							height: auto;
+
+							margin-top: -12px;
+						}
+
+					.voile{
+						position: absolute;
+						display: none;
+						background-color: rgba(0,0,0,.6);
+						width: 100%;
+						height: 100%;
+						z-index: 2;
+
+						top: 0;
+						left: 0;
+
+						transition: opacity;
+						transition-delay: 1s;
+					}
+
+						.overView{
+							background-color: black;
+							width: 1000px;
+							max-width: 1000px;
+							height: 100%;
+							overflow-y: scroll;
+
+							margin-right: 20%;
+							margin-left: 20%;
+						}
+
+							.div_sélection{
+								display: flex;
+							}
+
+								.form_sél{
+									padding-top: 10px;
+									padding-left: 25px;
+									margin-left: 470px;
+								}
+
+							.unEpisode{
+								display: grid;
+
+								grid-template-columns: auto auto auto auto;
+								grid-template-rows: 25px 100px;
+								grid-column-gap: 20px;
+							}
+
+								.taille_ep{
+									width: 250px;
+									height: 150px;
+								}
+
+								.one{
+									grid-column: 1 / 2;
+									grid-row: 1 / -1;
+								}
+
+
+								.two{
+									grid-column: 2 / 3;
+									grid-row: 1 / -1;
+								}
+
+
+								.three{
+									grid-column: 3 / 4;
+									grid-row: 1 / 2;
+								}
+
+
+								.four{
+									grid-column: 4 / -1;
+									grid-row: 1 / 2;
+								}
+
+
+								.five{
+									width: 500px;
+
+									grid-column: 3 / -1;
+									grid-row: 2 / -1;
+								}
+
+							.ensemble_avis{
+								margin-top: 70px;
+								text-align: justify;
+							}
+
+									.format_vid{
+										background-color: rgba(218, 93, 55, 1);
+										width: 400px;
+										height: 250px;
+									}
+
+										.espace_com{
+											width: 500px;
+											height: 200px;
+										}
+
+					.close{
+						position: fixed;
+						background-color: rgba(218, 93, 55, 1);
+						color: white;
+						border-style: none;
+						font-size: 20px;
+						border-radius: 5%;
+						width: 35px;
+						height: 35px;
+
+						top: 60px;
+						right: 60px;
+					}
+
+						.close:hover{
+							cursor: pointer;
+						}
+
+
+/*--------------
+------SPEC------
+--------------*/
+
+
+#page{
+	height: auto;
+	overflow: hidden;
+}
+
+		.navigation{
+			display: flex;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 1);
+			height: 30px;
+			width: 100%;
+			z-index: 5;
+
+			top: 0;
+			right: 0;
+			left: 0;
+		}
+
+			.lien_logo{
+				padding-left: 2%;
+			}
+
+				.vers_accueil{
+					width: 40px;
+					height: 30px;
+				}
+
+			.liens_droite{
+				padding-top: 5px;
+
+				margin-left: 60%;
+			}
+
+	#bienvenue{
+		background-image: url('../res/LogoJ.png');
+		background-size: 100% auto;
+
+		animation: 1.75s ease-out 0s 1 pageAppUp;
+	}
+
+		#userCo{
+			font-family: Dela Gothic One Regular, sans-serif;
+
+			color: white;
+			text-align: center;
+			
+			padding-top: 5%;
+			padding-bottom: 5%;
+		}
+
+			#bj{
+				font-size: 64px;
+			}
+
+			#idCo{
+				font-size: 66px;
+			}
+
+	#rubriques{
+		opacity: 0;
+
+		animation: 1s ease-out 1.5s 1 pageAppLeft;
+	}
+
+
+/*------------------
+------P-SERIES------
+------------------*/
+
+
+#entête_séries{
+	display: flex;
+}
+
+	#search:hover{
+		cursor: pointer;
+	}
+
+.LSeries{
+	opacity: 0;
+}
+
+
+/*------------------
+------P-PROFIL------
+------------------*/
+
+
+#profil{
+	display: flex;
+}
+
+		#avatar_logo{
+			height: 300px;
+			width: 300px;
+		}
+
+#mes_commentaires{
+	margin-left: 10%;
+
+	margin-right: 15%;
+}
+
+	.btns_admin{
+		display: flex;
+	}
+
+		.btn_adm{
+			height: 30px;
+
+			margin-top: 2%;
+			margin-left: 1%;
+		}
+
+
+/*-------------
+------404------
+-------------*/
+
+
+#page404{
+	background-image: url('../LogoJ.png');
+	background-size: 7%;
+	background-position: 48% 10%;
+	background-repeat: no-repeat;
+}
+
+	#p404{
+		margin-top: 5%;
+		margin-left: 33%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------
+------Log------
+-------------*/
+
+
+#connexion{
+	display: block;
+	background-color: rgba(218, 93, 55, 1);
+	border-radius: 20%;
+	width: 500px;
+	height: 400px;
+
+	margin-top: 150px;
+	margin-left: 500px;
+}
+
+	#connexion h1 {
+		font-size: 50px;
+
+		padding-top: 30px;
+		padding-left: 160px;
+	}
+
+	#connexion h2 {
+		margin-top: 30px;
+		margin-left: 165px;
+	}
+
+	.form_log-sign{
+		margin-left: 70px;
+	}
+
+		#identifiant{
+			margin-top: 60px;			
+		}
+
+			.input_infos{
+				border-style: none;
+				border-radius: 10%/50%;
+				width: 170px;
+				height: 20px;
+
+				padding-left: 70px;
+				margin-bottom: 10px;
+			}
+
+			#identifiant input{
+				margin-left: 50px;
+			}
+
+			#mdp input{
+				margin-left: 26px;
+			}
+
+		.log_buttons{
+			margin-top: 40px;
+			margin-left: 60px;
+		}
+
+			.log_buttons_space {
+				margin-right: 40px;
+			}
+
+			.log_buttons input:hover{
+				cursor: pointer;
+			}
+
+			.different_buttons{
+				border-style: none;
+				border-radius: 10%/40%;
+				background-color: white;
+				width: 100px;
+			}
+
+
+	/*-------------------
+	-----INSCRIPTION-----
+	-------------------*/
+
+
+#inscription{
+	display: block;
+	background-color: rgba(218, 93, 55, 1);
+	border-radius: 20%;
+	width: 500px;
+	height: 400px;
+
+	margin-top: 150px;
+	margin-left: 500px;
+}
+
+	#inscription h1 {
+		font-size: 50px;
+
+		padding-top: 30px;
+		padding-left: 160px;
+	}
+
+	#inscription h2 {
+		margin-top: 30px;
+		margin-left: 165px;
+	}
+
+		#sign-in{
+			margin-top: 30px;
+			margin-bottom: -14px;
+			margin-left: -30px;
+		}
+
+			#sign-in input:nth-child(2){
+				margin-left: 88px;
+			}
+
+			#sign-in input:nth-child(5){
+				margin-left: 64px;
+			}
+
+			#sign-in input:nth-child(8){
+				margin-left: 30px;
+			}
+
+			#sign-in input:nth-child(11){
+				margin-left: 132px;
+			}
+
+				.button_link{
+					text-decoration: none;
+					color: black;
+				}
